@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 2em 0 1em;
+}
+
+p,ul,ol {
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
 /**
  * Shades of Purple Theme for Prism.js
  *
@@ -52,7 +72,7 @@
  
  :not(pre) > code[class*='language-'],
  pre[class*='language-'] {
-     background: #1e1e3f;
+     background: #1f2937;
  }
  
  /* Inline code */
