@@ -75,3 +75,5 @@ A better solution is using flex. Flex display is one of my favorite things in st
 
 You can see and test both on my implementations on a Codepen below. I hope this will help you in your implementation.
 
+{% codepen 'https://codepen.io/tommybernaciak-the-reactor/pen/YBdrRd' %}
+

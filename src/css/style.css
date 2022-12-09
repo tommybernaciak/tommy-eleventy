@@ -18,6 +18,42 @@ h2 {
     font-size: 1.5rem;
 }
 
+table {
+    padding: .5em 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th {
+    background-color: #1f2937;
+    border: 1px solid #E4F0FF;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #E4F0FF;
+    border: 1px solid #1f2937;
+}
+
+tr {
+    transition: background-color 0.5s;
+  }
+  tr:hover {
+    background-color: #374151;
+  }
+  
+  td {
+    transition: background-color 0.4s;
+  }
+  td:hover {
+    background-color: #4b5563;
+  }
+
 /**
  * Shades of Purple Theme for Prism.js
  *
