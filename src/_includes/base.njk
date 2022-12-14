@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96253829-1"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-		gtag('config', 'UA-96253829-1');
-	</script>
+	{% if env.isProd %}
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ env.gId }}"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+			gtag('config', '{{ env.gId }}');
+		</script>
+	{% endif %}
     <title>{{ title }}</title>
 </head>
 <body>
