@@ -18,6 +18,16 @@ h2 {
     font-size: 1.5rem;
 }
 
+  
+/* mouse over link */
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #E4F0FF;
+  -webkit-text-decoration-color: #E4F0FF;
+  color: #ffffff;
+}
+
+
 table {
     padding: .5em 0;
     border-collapse: collapse;
