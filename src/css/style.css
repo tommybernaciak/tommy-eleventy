@@ -11,12 +11,24 @@ p,ul,ol {
 }
 
 h1 {
-    font-size: 2rem;
-}
-
-h2 {
     font-size: 1.5rem;
 }
+
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 2rem;
+    }
+ }
+
+h2 {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 768px) { 
+    h2 {
+        font-size: 1.5rem;
+    }
+ }
 
   
 /* mouse over link */
@@ -41,14 +53,27 @@ th {
     border: 1px solid #E4F0FF;
     padding: 10px;
     text-align: left;
-    font-size: 18px;
+    font-size: 12px;
 }
+
+@media (min-width: 768px) { 
+    th {
+        font-size: 18px;
+    }
+ }
 
 td {
     padding: 8px;
     border-bottom: 1px solid #E4F0FF;
     border: 1px solid #1f2937;
+    font-size: 12px;
 }
+
+@media (min-width: 768px) { 
+    td {
+        font-size: 16px;
+    }
+ }
 
 tr {
     transition: background-color 0.5s;
