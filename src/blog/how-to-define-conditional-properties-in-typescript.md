@@ -1,5 +1,5 @@
 ---
-title: Interface with conditional properties in TypeScript
+title: Conditional properties in TypeScript interface
 published: true
 description: 
 date: 2023-04-19
