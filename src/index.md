@@ -3,14 +3,16 @@ title: 'tommy'
 layout: 'base.njk'
 ---
 
-<h2 class="mb-2 text-lg font-semibold text-white">Blog Posts:</h2>
-<ul class=" text-gray-100 text-sm md:text-xl">
+<p class="eyebrow">The Journal</p>
+<h1 class="mt-1 mb-10">Latest posts</h1>
+
+<ul class="list-none pl-0">
 {% for post in collections.publishedPostsByDate  %}
-<a href="{{ post.url }}">
-    <li class="flex justify-between mb-8 border-b-2">
-        <time class="italic text-xs md:text-sm" datetime="{{ post.date }}">{{ post.data.date | formatDate }}</time> 
-        <p class="font-semibold">{{ post.data.title }}</p>
-    </li>
-</a>
+<li class="py-8 border-b border-[#ece8e3]">
+    <a href="{{ post.url }}" class="group block">
+        <time class="eyebrow block mb-2" datetime="{{ post.date }}">{{ post.data.date | formatDate }}</time>
+        <span class="block transition-opacity group-hover:opacity-70" style="font-family: 'Playfair Display', serif; color: #2b2b2b; font-size: 1.5rem; line-height: 1.3;">{{ post.data.title }}</span>
+    </a>
+</li>
 {% endfor %}
 </ul>

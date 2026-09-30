@@ -11,7 +11,7 @@ module.exports = function (config) {
 		const url_array = url.split('/');
 
 		const profile_url_array = url_array.filter((string, index) => {
-			return index < url_array.length - 2 ? true : false;
+			return index < url_array.length - 2;
 		});
 
 		const username = profile_url_array[profile_url_array.length - 1];

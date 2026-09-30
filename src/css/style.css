@@ -2,302 +2,296 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
+/* -------------------------------------------------------------------------- */
+/*  Lauren-inspired light, editorial theme                                    */
+/* -------------------------------------------------------------------------- */
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 2em 0 1em;
+:root {
+    --color-bg: #fffdfb;
+    --color-text: #4a4a4a;
+    --color-heading: #2b2b2b;
+    --color-muted: #a09a92;
+    --color-border: #ece8e3;
+    --color-accent: #b08968;
+    --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-weight: 500;
+    margin: 1.6em 0 0.6em;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
     text-wrap: balance;
 }
 
-p,ul,ol {
-    margin-bottom: 1em;
-}
-
 h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
- }
+}
 
 h2 {
     font-size: 1.5rem;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     h2 {
         font-size: 2rem;
     }
- }
+}
 
 h3 {
     font-size: 1.25rem;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     h3 {
         font-size: 1.5rem;
     }
- }
-
-  
-/* mouse over link */
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: #E4F0FF;
-  -webkit-text-decoration-color: #E4F0FF;
-  color: #ffffff;
 }
 
+p, ul, ol {
+    margin-bottom: 1.4em;
+}
 
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+article a,
+main p a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--color-accent);
+    opacity: 0.75;
+}
+
+/* Small helper for uppercase, spaced labels (dates, nav, meta) */
+.eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 400;
+}
+
+/* Tables */
 table {
-    padding: .5em 0;
     border-collapse: collapse;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
     width: 100%;
-    margin: 1rem 0;
+    margin: 1.75rem 0;
+    font-size: 0.95rem;
 }
 
 th {
-    background-color: #1f2937;
-    border: 1px solid #E4F0FF;
-    padding: 10px;
+    background-color: #faf7f3;
+    border: 1px solid var(--color-border);
+    padding: 12px;
     text-align: left;
-    font-size: 12px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--color-heading);
+    font-size: 13px;
+    letter-spacing: 0.04em;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     th {
-        font-size: 18px;
+        font-size: 15px;
     }
- }
+}
 
 td {
-    padding: 8px;
-    border-bottom: 1px solid #E4F0FF;
-    border: 1px solid #1f2937;
-    font-size: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    font-size: 13px;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     td {
-        font-size: 16px;
+        font-size: 15px;
     }
- }
+}
 
 tr {
-    transition: background-color 0.5s;
-  }
-  tr:hover {
-    background-color: #374151;
-  }
-  
-  td {
-    transition: background-color 0.4s;
-  }
-  td:hover {
-    background-color: #4b5563;
-  }
+    transition: background-color 0.3s;
+}
 
-/**
- * Shades of Purple Theme for Prism.js
- *
- * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
- * @support Follow/tweet at https://twitter.com/MrAhmadAwais/
- */
+tbody tr:hover {
+    background-color: #faf7f3;
+}
 
- code[class*='language-'],
- pre[class*='language-'] {
-     color: #9efeff;
-     direction: ltr;
-     text-align: left;
-     white-space: pre;
-     word-spacing: normal;
-     word-break: normal;
- 
-     -moz-tab-size: 4;
-     -o-tab-size: 4;
-     tab-size: 4;
- 
-     -webkit-hyphens: none;
-     -moz-hyphens: none;
-     -ms-hyphens: none;
-     hyphens: none;
- 
-     font-family: 'Operator Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-     font-weight: 400;
-     font-size: 17px;
-     line-height: 25px;
-     letter-spacing: 0.5px;
-     text-shadow: 0 1px #222245;
- }
- 
- pre[class*='language-']::-moz-selection,
- pre[class*='language-'] ::-moz-selection,
- code[class*='language-']::-moz-selection,
- code[class*='language-'] ::-moz-selection,
- pre[class*='language-']::selection,
- pre[class*='language-'] ::selection,
- code[class*='language-']::selection,
- code[class*='language-'] ::selection {
-     color: inherit;
-     background: #a599e9;
- }
- 
- /* Code blocks. */
- pre[class*='language-'] {
-     padding: 2em;
-     margin: 0.5em 0;
-     overflow: auto;
- }
- 
- :not(pre) > code[class*='language-'],
- pre[class*='language-'] {
-     background: #1f2937;
- }
- 
- /* Inline code */
- :not(pre) > code[class*='language-'] {
-     padding: 0.1em;
-     border-radius: 0.3em;
- }
- 
- .token {
-     font-weight: 400;
- }
- 
- .token.comment,
- .token.prolog,
- .token.cdata {
-     color: #b362ff;
- }
- 
- .token.delimiter,
- .token.keyword,
- .token.selector,
- .token.important,
- .token.atrule {
-     color: #ff9d00;
- }
- 
- .token.operator,
- .token.attr-name {
-     color: rgb(255, 180, 84);
- }
- 
- .token.punctuation {
-     color: #ffffff;
- }
- 
- .token.boolean {
-     color: rgb(255, 98, 140);
- }
- 
- .token.tag,
- .token.tag .punctuation,
- .token.doctype,
- .token.builtin {
-     color: rgb(255, 157, 0);
- }
- 
- .token.entity,
- .token.symbol {
-     color: #6897bb;
- }
- 
- .token.number {
-     color: #ff628c;
- }
- 
- .token.property,
- .token.constant,
- .token.variable {
-     color: #ff628c;
- }
- 
- .token.string,
- .token.char {
-     color: #a5ff90;
- }
- 
- .token.attr-value,
- .token.attr-value .punctuation {
-     color: #a5c261;
- }
- 
- .token.attr-value .punctuation:first-child {
-     color: #a9b7c6;
- }
- 
- .token.url {
-     color: #287bde;
-     text-decoration: underline;
- }
- 
- .token.function {
-     color: rgb(250, 208, 0);
- }
- 
- .token.regex {
-     background: #364135;
- }
- 
- .token.bold {
-     font-weight: bold;
- }
- 
- .token.italic {
-     font-style: italic;
- }
- 
- .token.inserted {
-     background: #00ff00;
- }
- 
- .token.deleted {
-     background: #ff000d;
- }
- 
- code.language-css .token.property,
- code.language-css .token.property + .token.punctuation {
-     color: #a9b7c6;
- }
- 
- code.language-css .token.id {
-     color: #ffc66d;
- }
- 
- code.language-css .token.selector > .token.class,
- code.language-css .token.selector > .token.attribute,
- code.language-css .token.selector > .token.pseudo-class,
- code.language-css .token.selector > .token.pseudo-element {
-     color: #ffc66d;
- }
- 
- .token.class-name {
-     color: #fb94ff;
- }
- 
- .token.operator,
- .token.entity,
- .token.url,
- .language-css .token.string,
- .style .token.string {
-     background: none;
- }
- 
- .line-highlight.line-highlight {
-     margin-top: 36px;
-     background: linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent);
- }
- 
- .line-highlight.line-highlight:before,
- .line-highlight.line-highlight[data-end]:after {
-     content: '';
- }
+blockquote {
+    border-left: 2px solid var(--color-accent);
+    padding-left: 1.25rem;
+    margin: 1.75rem 0;
+    font-style: italic;
+    color: var(--color-heading);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2.5rem 0;
+}
+
+img {
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Code highlighting - light theme (Prism)                                   */
+/* -------------------------------------------------------------------------- */
+
+code[class*='language-'],
+pre[class*='language-'] {
+    color: #383a42;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    font-family: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    text-shadow: none;
+    background: none;
+}
+
+pre[class*='language-'] {
+    padding: 1.5em;
+    margin: 1.75em 0;
+    overflow: auto;
+    background: #f7f5f2;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+}
+
+:not(pre) > code[class*='language-'] {
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    background: #f2efeb;
+    color: #a626a4;
+    font-size: 0.85em;
+}
+
+/* Bare inline code (no language class) */
+:not(pre) > code {
+    font-family: 'Fira Code', 'SFMono-Regular', Consolas, monospace;
+    background: #f2efeb;
+    color: #a626a4;
+    padding: 0.12em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+    color: #a0a1a7;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #6c6f78;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #986801;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #50a14f;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #0184bc;
+    background: none;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #a626a4;
+}
+
+.token.function,
+.token.class-name {
+    color: #4078f2;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #c18401;
+}
+
+.token.important,
+.token.bold {
+    font-weight: 600;
+}
+
+.token.italic {
+    font-style: italic;
+}
